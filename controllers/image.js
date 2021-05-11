@@ -1,7 +1,7 @@
 const Clarifai = require('clarifai');
 
 const app = new Clarifai.App({
-    apiKey: 'a140dfadbcc54b73a113fb333bb83a1e'
+    apiKey: process.env.API_CLARIFAI
 })
 const handleClarifaiApiCall = (req, res) => {
     app.models.predict('f76196b43bbd45c99b4f3cd8e8b40a8a', req.body.input)
