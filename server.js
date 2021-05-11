@@ -34,5 +34,5 @@ app.get('/profile/:id', profile.handleProfileGet(db))
 app.put('/image', image.handleImagePut(db) )
 app.post('/imageurl', (req,res) => { image.handleClarifaiApiCall(req, res) })
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () =>{ console.log(`app is running on port ${PORT}`); })
